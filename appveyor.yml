@@ -7,5 +7,5 @@ build_script:
 
 # Define the artifacts to be uploaded after a successful build
 artifacts:
-  - path: RegSave/obj/Debug/*.exe
+  - path: RegSave/obj/*.exe
     name: RegSave
