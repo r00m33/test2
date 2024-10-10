@@ -1,0 +1,11 @@
+version: 1.0.{build}
+image: Visual Studio 2019
+
+# Build configuration
+build_script:
+  - cmd: msbuild "C:\projects\test2\RegSave.sln" /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+
+# Define the artifacts to be uploaded after a successful build
+artifacts:
+  - path: RegSave/obj/Debug/*.exe
+    name: RegSave
